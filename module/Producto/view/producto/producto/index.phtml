@@ -1,0 +1,29 @@
+
+<div ng-controller="FirstController">
+
+  {{ "Hola " + nombre}}
+  
+<h1><?php echo $this->translate('Productos'); ?></h1>
+
+<div id="tax-actions" class="col-xs-6 col-lg-6 pull-right table-top-action-padding hidden-print">
+    <div class="input-group">
+      <div class="input-filter-container">
+        <p class="items-count">{{tableParams.total()}}</p>
+      </div>
+      
+    </div>
+</div>
+
+<table ng-table="tableParams" class="table table-hover table-condensed table-data">
+    <tr ng-repeat="producto in Producto" >
+        <td data-title="Titulo" sortable="'titulo'">{{producto.titulo}}</td>
+        <td data-title="Descripcion" sortable="'descripcion'">{{producto.descripcion}}</td>
+            <div class="container">
+              
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+</div>
